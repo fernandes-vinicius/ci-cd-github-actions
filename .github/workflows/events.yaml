@@ -2,7 +2,8 @@ name: events
 run-name: Events
 
 on:
-    - issues
+    issues:
+        types: opened
 
 jobs:
     show-ref-and-sha:
