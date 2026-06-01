@@ -7,12 +7,14 @@ on:
 # defaults:
 #     run:
 #         shell: pwsh
+#         working-directory: ./temp
 
 jobs:
     display-workdir-info:
         # defaults:
         #     run:
         #         shell: pwsh
+        #         working-directory: ./temp
         runs-on: ubuntu-latest
         steps:
             - name: Display workdir and list files
@@ -26,6 +28,7 @@ jobs:
 
             - name: Python shell
               shell: python
+            #   working-directory: ./temp
               run: |
                 import platform
                 print(platform.processor())
