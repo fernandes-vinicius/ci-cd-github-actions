@@ -4,14 +4,28 @@ run-name: Shell e diretórios de trabalho
 on:
     - push
 
+# defaults:
+#     run:
+#         shell: pwsh
+
 jobs:
     display-workdir-info:
+        # defaults:
+        #     run:
+        #         shell: pwsh
         runs-on: ubuntu-latest
         steps:
             - name: Display workdir and list files
+            #   shell: pwsh
               run: |
                 pwd
                 ls -a
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
                 echo $GITHUB_WORKSPACE
+
+            - name: Python shell
+              shell: python
+              run: |
+                import platform
+                print(platform.processor())
