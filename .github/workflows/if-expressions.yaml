@@ -11,8 +11,8 @@ jobs:
         steps:
             - name: Only on push
               if: github.event_name == 'push'
-              run: echo 'Foi feito um push'
+              run: echo 'Foi feito um push!'
             
             - name: Only on PR
               if: github.event_name == 'pull_request'
-              run: echo 'Foi feita uma PR'
+              run: echo 'Foi feita uma PR!'
